@@ -68,7 +68,7 @@
 .coin {
   display: flex;
   align-items: center;
-  padding-right: 24px;
+  padding-right: 0px;
 
   min-width: 300px;
 }
@@ -106,7 +106,6 @@
 .coin-marketcap {
   width: 230px;
 }
-
 .coin-percent {
   width: 100px;
 }
