@@ -1,0 +1,62 @@
+body {
+  background: rgb(27, 27, 32);
+  font-family: 'Poppins';
+  margin: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 4em;
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  margin-bottom: 2em;
+  padding: 4em;
+}
+
+a {
+  color: rgb(0, 99, 228);
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em;
+  margin-left: -0.5em;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid rgb(0, 99, 228);
+    border-radius: 1em;
+    bottom: 0.3em;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &:before {
+    width: 1em;
+    transform-origin: left;
+  }
+
+  &:after {
+    width: 82%;
+    left: 1em;
+    transform: translateX(110%);
+  }
+
+  &:hover:before {
+    transform: scaleX(0.3);
+  }
+
+  &:hover:after {
+    transform: translateX(0);
+  }
+}
